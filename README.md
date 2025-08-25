@@ -31,7 +31,7 @@ A CLI-based career guidance chatbot that accepts PDF input (like resumes, study 
 🛠️ Installation
 
 #Clone the repository
-git clone https://github.com/yourusername/ai-career-chatbot.git
+git clone [[https://github.com/yourusername/ai-career-chatbot](https://github.com/ShivOnly/AI-Career-Chatbot/).git](https://github.com/ShivOnly/AI-Career-Chatbot/)
 cd ai-career-chatbot
 
 #Create virtual environment
