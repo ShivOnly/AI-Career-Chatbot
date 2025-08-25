@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RAG PDF Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📄 RAG PDF Assistant</h1>
+    <textarea id="userQuery" placeholder="Ask something about the PDF..."></textarea>
+    <button onclick="askQuestion()">Submit</button>
+    <div id="responseBox"></div>
+  </div>
+
+  <script>
+    async function askQuestion() {
+      const query = document.getElementById("userQuery").value;
+      const responseBox = document.getElementById("responseBox");
+      responseBox.innerHTML = "⏳ Thinking...";
+
+      const res = await fetch("/query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+      });
+
+      const data = await res.json();
+      responseBox.innerHTML = `<strong>Answer:</strong> ${data.response}`;
+    }
+  </script>
+</body>
+</html>
