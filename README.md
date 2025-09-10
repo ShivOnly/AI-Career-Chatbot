@@ -1,6 +1,6 @@
 # AI-Career-Chatbot
 
-Nice 🚀 You want a README.md for your AI Career Chatbot (CLI-based) project that:
+ AI Career Chatbot (CLI-based) :
 
 .Accepts a PDF
 .Splits it into tokens/chunks
